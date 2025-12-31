@@ -1,123 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Blorbverso Tools</title>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omniverse Compendium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="The ultimate archive for your fictional universe." />
+    <meta name="author" content="devlo" />
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  height: 100vh;
-  background: #f3f3f3;
-}
+    <meta property="og:title" content="title" />
+    <meta property="og:description" content="description" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/opengraph-image.png" />
 
-/* BARRA IZQUIERDA */
-#sidebar {
-  width: 30%;
-  max-width: 300px;
-  background: #222;
-  color: white;
-  overflow-y: auto;
-  padding: 10px;
-}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@devloai" />
+    <meta name="twitter:image" content="/opengraph-image.png" />
+  </head>
 
-#sidebar h2 {
-  text-align: center;
-}
-
-.item {
-  padding: 10px;
-  margin: 5px 0;
-  background: #333;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.item:hover {
-  background: #444;
-}
-
-/* PANEL DERECHO */
-#content {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-  background: white;
-  border-left: 3px solid #ccc;
-}
-
-#content h2 {
-  margin-top: 0;
-}
-</style>
-</head>
-<body>
-
-<!-- LISTA DINÁMICA -->
-<div id="sidebar">
-  <h2>Razas</h2>
-  <div id="race-list">Cargando...</div>
-</div>
-
-<!-- PANEL DERECHO -->
-<div id="content">
-  <h2>Selecciona una raza</h2>
-  <p>Haz clic en algún elemento de la lista para ver su información aquí.</p>
-</div>
-
-<script>
-async function loadRaces() {
-  try {
-    const response = await fetch("data/razas.json");
-    const razas = await response.json();
-
-    const listContainer = document.getElementById("race-list");
-    listContainer.innerHTML = "";
-
-    razas.forEach(race => {
-      const div = document.createElement("div");
-      div.className = "item";
-      div.textContent = race.nombre;
-      div.onclick = () => loadContent(race);
-      listContainer.appendChild(div);
-    });
-
-  } catch (error) {
-    document.getElementById("race-list").textContent = "Error al cargar razas.";
-    console.error(error);
-  }
-}
-
-function loadContent(race) {
-  let html = `
-    <h2>${race.nombre}</h2>
-    <p>${race.descripcion || "Sin descripción disponible."}</p>
-  `;
-
-  if (race.bonos) {
-    html += "<h3>Bonificaciones</h3><ul>";
-
-    if (race.bonos.stats)
-      html += `<li><strong>Puntos en estadísticas:</strong> ${race.bonos.stats}</li>`;
-
-    if (race.bonos.habilidades_inicio)
-      html += `<li><strong>Habilidades iniciales:</strong> ${race.bonos.habilidades_inicio}</li>`;
-
-    if (race.bonos.habilidades_por_nivel)
-      html += `<li><strong>Habilidades por nivel:</strong> ${race.bonos.habilidades_por_nivel}</li>`;
-
-    html += "</ul>";
-  }
-
-  document.getElementById("content").innerHTML = html;
-}
-
-// Iniciar al cargar la página
-loadRaces();
-</script>
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
