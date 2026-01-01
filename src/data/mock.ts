@@ -35,7 +35,7 @@ export const monsters: Monster[] = [
     alignment: "Variable",
     playableRace: true,
     tags: ["Humanoide", "Conciencia Constante", "Raza Jugable", "Primera Edicion"],
-    description: ".",
+    description: "Tambien conocidos como Los Hombres de las Praderas. Los humanos son seres simples. No son muy altos, no viven demasiado, no son especialmente poderosos y, sin embargo, han demostrado ser una amenaza. Los humanos tienen un don unico para la violencia y la creatividad. Se cree que solo hay dos cosas que podrian impulsar una sociedad humana: la necesidad y la guerra.",
     stats: { str: 14, dex: 18, con: 14, int: 12, wis: 14, cha: 8 },
     Caracteristicas: [
       { name: "Altura Promedio", desc: "entre 1.50 y 2.10 metros." },
