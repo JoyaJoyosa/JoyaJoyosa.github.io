@@ -18,7 +18,7 @@ export interface Monster {
     wis: number;
     cha: number;
   };
-  actions: {
+  Caracteristicas: {
     name: string;
     desc: string;
   }[];
@@ -27,58 +27,60 @@ export interface Monster {
 export const monsters: Monster[] = [
   {
     id: "1",
-    name: "Void Stalker",
-    type: "Aberration",
-    cr: "5",
+    name: "Humanos",
+    type: "Humanoide",
+    cr: "Variable",
     ac: 15,
-    hp: "12d8 + 24",
-    alignment: "Chaotic Evil",
-    playableRace: false,
-    tags: ["Sombra", "Teletransporte", "Espacio", "Oscuridad"],
-    description: "A creature formed from the emptiness between stars, hunting those who dare to travel the astral sea.",
+    hp: "Variable",
+    alignment: "Variable",
+    playableRace: true,
+    tags: ["Humanoide", "Conciencia Constante", "Raza Jugable", "Primera Edicion"],
+    description: ".",
     stats: { str: 14, dex: 18, con: 14, int: 12, wis: 14, cha: 8 },
-    actions: [
-      { name: "Shadow Claw", desc: "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 4) necrotic damage." },
-      { name: "Void Step", desc: "The stalker teleports up to 60 feet to an unoccupied space it can see that is in dim light or darkness." }
+    Caracteristicas: [
+      { name: "Altura Promedio", desc: "entre 1.50 y 2.10 metros." },
+      { name: "Estimado de Vida", desc: "100 Años." },
+      { name: "Poderes Arcanos", desc: "Si." }
+
     ]
   },
   {
     id: "2",
-    name: "Crystal Golem",
+    name: "Elfos",
     type: "Construct",
     cr: "9",
     ac: 18,
     hp: "16d10 + 64",
     alignment: "Unaligned",
-    playableRace: false,
+    playableRace: true,
     tags: ["Guardián", "Arcano", "Sónico", "Constructo"],
     description: "A massive construct of resonating crystals, guarding ancient libraries of the arcane.",
     stats: { str: 22, dex: 9, con: 18, int: 3, wis: 10, cha: 1 },
-    actions: [
+    Caracteristicas: [
       { name: "Slam", desc: "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 20 (3d8 + 6) bludgeoning damage." },
       { name: "Resonance Blast", desc: "The golem emits a blast of sonic energy. Each creature within 20 feet must make a DC 16 Constitution saving throw, taking 36 (8d8) thunder damage on a failed save." }
     ]
   },
   {
     id: "3",
-    name: "Cyber-Lich",
+    name: "Enanos",
     type: "Undead (Cybernetic)",
     cr: "21",
     ac: 19,
     hp: "20d8 + 100",
     alignment: "Lawful Evil",
-    playableRace: false,
+    playableRace: true,
     tags: ["No-Muerto", "Tecnología", "Hechicero", "Boss"],
     description: "An ancient wizard who uploaded their consciousness into a phylactery-mainframe, commanding legions of undead drones.",
     stats: { str: 10, dex: 16, con: 20, int: 24, wis: 16, cha: 18 },
-    actions: [
+    Caracteristicas: [
       { name: "Digital Rot", desc: "Ranged Spell Attack: +12 to hit, range 120 ft., one target. Hit: 28 (8d6) necrotic damage." },
       { name: "System Override", desc: "The lich targets one construct or machine within 60 feet. The target must succeed on a DC 20 Intelligence saving throw or be charmed by the lich for 1 minute." }
     ]
   },
   {
     id: "4",
-    name: "Luminari",
+    name: "Gigantes",
     type: "Humanoid (Playable Race)",
     cr: "1/8",
     ac: 12,
@@ -88,13 +90,13 @@ export const monsters: Monster[] = [
     tags: ["Luz", "Psiónico", "Espacial", "Carisma"],
     description: "Beings of pure bioluminescence, the Luminari are ancient interstellar travelers who can communicate through light patterns.",
     stats: { str: 10, dex: 14, con: 10, int: 13, wis: 15, cha: 16 },
-    actions: [
+    Caracteristicas: [
       { name: "Light Burst", desc: "Ranged Spell Attack: +4 to hit, range 60 ft., one target. Hit: 7 (1d10 + 2) radiant damage." }
     ]
   },
   {
     id: "5",
-    name: "Synthroid",
+    name: "Gouna Canino",
     type: "Humanoid (Cyborg) (Playable Race)",
     cr: "1/4",
     ac: 14,
@@ -104,13 +106,13 @@ export const monsters: Monster[] = [
     tags: ["Tecnología", "Cibernético", "Fuerza", "Fuego"],
     description: "Artificially enhanced beings with cybernetic implants. Synthesized through ancient bioengineering protocols.",
     stats: { str: 16, dex: 12, con: 14, int: 14, wis: 11, cha: 12 },
-    actions: [
+    Caracteristicas: [
       { name: "Plasma Cannon", desc: "Ranged Weapon Attack: +4 to hit, range 90 ft., one target. Hit: 10 (2d6 + 2) fire damage." }
     ]
   },
   {
     id: "6",
-    name: "Void-touched",
+    name: "Gouna Felino",
     type: "Humanoid (Playable Race)",
     cr: "1/8",
     ac: 13,
@@ -120,10 +122,147 @@ export const monsters: Monster[] = [
     tags: ["Sombra", "Espacio", "Versatil", "Misterioso"],
     description: "Mortals touched by the void, marked by shadow and starlight. They exist between worlds, caught in the fabric of the cosmos.",
     stats: { str: 12, dex: 15, con: 11, int: 12, wis: 16, cha: 14 },
-    actions: [
+    Caracteristicas: [
       { name: "Shadow Strike", desc: "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 2) necrotic damage." }
     ]
-  }
+  },
+  {
+  id: "7",  // Cambia el ID (debe ser único)
+  name: "Gouna Leporido",
+  type: "Humanoide",
+  cr: "10",  // Challenge Rating
+  ac: 16,    // Armor Class
+  hp: "15d10 + 30",  // Hit Points
+  alignment: "Neutral Evil",
+  playableRace: true,  // true si es jugable, false si es enemigo
+  tags: ["Fuego", "Volador", "Boss", "Magia"],  // Tags para filtrado (elige 2-5 tags relevantes)
+  description: "Descripción de la criatura. Añade lore y contexto aquí.",
+  stats: { str: 18, dex: 12, con: 16, int: 10, wis: 14, cha: 8 },
+  Caracteristicas: [
+    { 
+      name: "Ataque Principal", 
+      desc: "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 22 (3d10 + 4) slashing damage." 
+    },
+    { 
+      name: "Habilidad Especial", 
+      desc: "Descripción de la habilidad especial. Puede ser un ataque a distancia, buff, etc."}
+  ]
+  },
+  {
+  id: "8",  // Cambia el ID (debe ser único)
+  name: "Gouna Miomo",
+  type: "Tipo (ej: Dragón, Demonio, Elemental)",
+  cr: "10",  // Challenge Rating
+  ac: 16,    // Armor Class
+  hp: "15d10 + 30",  // Hit Points
+  alignment: "Neutral Evil",
+  playableRace: true,  // true si es jugable, false si es enemigo
+  tags: ["Fuego", "Volador", "Boss", "Magia"],  // Tags para filtrado (elige 2-5 tags relevantes)
+  description: "Descripción de la criatura. Añade lore y contexto aquí.",
+  stats: { str: 18, dex: 12, con: 16, int: 10, wis: 14, cha: 8 },
+  Caracteristicas: [
+    { 
+      name: "Ataque Principal", 
+      desc: "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 22 (3d10 + 4) slashing damage." 
+    },
+    { 
+      name: "Habilidad Especial", 
+      desc: "Descripción de la habilidad especial. Puede ser un ataque a distancia, buff, etc." 
+    }
+  ]
+  },
+  {
+  id: "9",  // Cambia el ID (debe ser único)
+  name: "Gouna Ovido",
+  type: "Tipo (ej: Dragón, Demonio, Elemental)",
+  cr: "10",  // Challenge Rating
+  ac: 16,    // Armor Class
+  hp: "15d10 + 30",  // Hit Points
+  alignment: "Neutral Evil",
+  playableRace: true,  // true si es jugable, false si es enemigo
+  tags: ["Fuego", "Volador", "Boss", "Magia"],  // Tags para filtrado (elige 2-5 tags relevantes)
+  description: "Descripción de la criatura. Añade lore y contexto aquí.",
+  stats: { str: 18, dex: 12, con: 16, int: 10, wis: 14, cha: 8 },
+  Caracteristicas: [
+    { 
+      name: "Ataque Principal", 
+      desc: "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 22 (3d10 + 4) slashing damage." 
+    },
+    { 
+      name: "Habilidad Especial", 
+      desc: "Descripción de la habilidad especial. Puede ser un ataque a distancia, buff, etc." 
+    }
+  ]
+  },
+  {
+  id: "10",  // Cambia el ID (debe ser único)
+  name: "Gouna Vulpino",
+  type: "Tipo (ej: Dragón, Demonio, Elemental)",
+  cr: "10",  // Challenge Rating
+  ac: 16,    // Armor Class
+  hp: "15d10 + 30",  // Hit Points
+  alignment: "Neutral Evil",
+  playableRace: true,  // true si es jugable, false si es enemigo
+  tags: ["Fuego", "Volador", "Boss", "Magia"],  // Tags para filtrado (elige 2-5 tags relevantes)
+  description: "Descripción de la criatura. Añade lore y contexto aquí.",
+  stats: { str: 18, dex: 12, con: 16, int: 10, wis: 14, cha: 8 },
+  Caracteristicas: [
+    { 
+      name: "Ataque Principal", 
+      desc: "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 22 (3d10 + 4) slashing damage." 
+    },
+    { 
+      name: "Habilidad Especial", 
+      desc: "Descripción de la habilidad especial. Puede ser un ataque a distancia, buff, etc." 
+    }
+  ]
+  },
+  {
+  id: "11",  // Cambia el ID (debe ser único)
+  name: "Gouna Equino",
+  type: "Tipo (ej: Dragón, Demonio, Elemental)",
+  cr: "10",  // Challenge Rating
+  ac: 16,    // Armor Class
+  hp: "15d10 + 30",  // Hit Points
+  alignment: "Neutral Evil",
+  playableRace: true,  // true si es jugable, false si es enemigo
+  tags: ["Fuego", "Volador", "Boss", "Magia"],  // Tags para filtrado (elige 2-5 tags relevantes)
+  description: "Descripción de la criatura. Añade lore y contexto aquí.",
+  stats: { str: 18, dex: 12, con: 16, int: 10, wis: 14, cha: 8 },
+  Caracteristicas: [
+    { 
+      name: "Ataque Principal", 
+      desc: "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 22 (3d10 + 4) slashing damage." 
+    },
+    { 
+      name: "Habilidad Especial", 
+      desc: "Descripción de la habilidad especial. Puede ser un ataque a distancia, buff, etc." 
+    }
+  ]
+  },
+  {
+  id: "12",  // Cambia el ID (debe ser único)
+  name: "Gouna Cervido",
+  type: "Tipo (ej: Dragón, Demonio, Elemental)",
+  cr: "10",  // Challenge Rating
+  ac: 16,    // Armor Class
+  hp: "15d10 + 30",  // Hit Points
+  alignment: "Neutral Evil",
+  playableRace: true,  // true si es jugable, false si es enemigo
+  tags: ["Fuego", "Volador", "Boss", "Magia"],  // Tags para filtrado (elige 2-5 tags relevantes)
+  description: "Descripción de la criatura. Añade lore y contexto aquí.",
+  stats: { str: 18, dex: 12, con: 16, int: 10, wis: 14, cha: 8 },
+  Caracteristicas: [
+    { 
+      name: "Ataque Principal", 
+      desc: "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 22 (3d10 + 4) slashing damage." 
+    },
+    { 
+      name: "Habilidad Especial", 
+      desc: "Descripción de la habilidad especial. Puede ser un ataque a distancia, buff, etc." 
+    }
+  ]
+  },
 ];
 
 export interface Spell {

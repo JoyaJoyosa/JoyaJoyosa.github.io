@@ -40,10 +40,10 @@ const Index = () => {
                 v1.0 Public Beta
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/60 mb-4">
-                Omniverse Compendium
+                Glorbverse
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8">
-                The ultimate archive for your fictional universe. Catalog lore, mechanics, and entities in a unified database.
+                Toda la informacion sobre el Glorbverse en una sola pagina!
             </p>
             
             <div className="max-w-md mx-auto relative">
@@ -52,7 +52,7 @@ const Index = () => {
                 </div>
                 <Input 
                 type="search" 
-                placeholder="Search the archives..." 
+                placeholder="Buscas algo en especifico?" 
                 className="pl-10 h-12 bg-background/50 border-white/10 focus:border-primary/50 transition-all backdrop-blur-xl"
                 />
             </div>
@@ -63,28 +63,28 @@ const Index = () => {
           <QuickLink 
             title="Atlas" 
             icon={Map} 
-            description="Explore locations, maps, and geography." 
+            description="Eventos, lugares y geografia del Glorbverse." 
             to="/atlas"
             color="text-emerald-400"
           />
           <QuickLink 
-            title="Bestiary" 
+            title="Bestiario" 
             icon={Skull} 
-            description="Catalog monsters, NPCs, and threats." 
+            description="Toda la fauna importante del Glorbverse." 
             to="/bestiary"
             color="text-rose-400"
           />
           <QuickLink 
-            title="Grimoire" 
+            title="Grimorio" 
             icon={Scroll} 
-            description="Manage spells, abilities, and tech." 
+            description="Revisa habilidades, hechizos, etc." 
             to="/grimoire"
             color="text-violet-400"
           />
           <QuickLink 
-            title="Archives" 
+            title="Archivos" 
             icon={Archive} 
-            description="History, factions, and general lore." 
+            description="Historias, facciones y lore general.." 
             to="/archives"
             color="text-amber-400"
           />

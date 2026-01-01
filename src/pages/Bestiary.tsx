@@ -61,8 +61,8 @@ const StatBlock = ({ monster }: { monster: Monster }) => (
     </div>
 
     <div className="space-y-4">
-      <h4 className="font-bold text-lg border-b border-white/10 pb-1 text-primary/80">Actions</h4>
-      {monster.actions.map((action, idx) => (
+      <h4 className="font-bold text-lg border-b border-white/10 pb-1 text-primary/80">Caracteristicas</h4>
+      {monster.Caracteristicas.map((action, idx) => (
         <div key={idx} className="group">
           <span className="font-bold text-white group-hover:text-primary transition-colors cursor-pointer">{action.name}.</span>{" "}
           <span className="text-muted-foreground">{action.desc}</span>

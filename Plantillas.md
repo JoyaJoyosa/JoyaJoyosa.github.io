@@ -23,7 +23,7 @@ Este archivo contiene plantillas listas para copiar, pegar y editar. Úsalas par
   tags: ["Fuego", "Volador", "Boss", "Magia"],  // Tags para filtrado (elige 2-5 tags relevantes)
   description: "Descripción de la criatura. Añade lore y contexto aquí.",
   stats: { str: 18, dex: 12, con: 16, int: 10, wis: 14, cha: 8 },
-  actions: [
+  Caracteristicas: [
     { 
       name: "Ataque Principal", 
       desc: "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 22 (3d10 + 4) slashing damage." 
